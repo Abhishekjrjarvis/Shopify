@@ -8,13 +8,8 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
-      <!-- <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li> -->
       <form class="form-inline my-2 my-lg-0">
         <input id="search" name="q" class="form-control mr-sm-2 bg-dark" type="search" placeholder="Search" aria-label="Search" style="border-radius: 3px;"><i class="fas fa-search mr-4" style="color: #f50606; cursor: pointer;"></i>
-<!-- 
-         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
       </form>
        <li class="nav-item dropdown mr-4">
         <a class="nav-link " id="dropdown-color" href="#" id="navbarDropdown"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -49,14 +44,6 @@
         <a class="nav-link" id="check-login" data-target="#exampleModal" href="/user/login"><b>Login</b></a>
       </li>
       <% }else { %> 
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="dropdown-color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="far fa-user-circle"></i>
-          </a>
-          <div id="dropdown-color" class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/farms"><i class="far fa-user-circle"></i> Your Profile</a>
-          </div>
-          </li> -->
           <li class="nav-item dropdown mr-4 mt-0">
             <a class="nav-link" id="dropdown-color" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="text-center user-avatar" style=" width: 30px; height: 31px; border-radius: 20px; ">
@@ -80,6 +67,5 @@
         <a class="nav-link" id="navlinks" href="/user/cart"><i class="fas fa-cart-plus pr-1"></i><b>Cart <span class="badge badge-danger" style="background-color: #f50606; color: #fff; border-radius: 10px;"><%= currentUser.cart.length %></span></b></a>
       </li> 
       <% } %>
-    <!-- <i class="far fa-user-circle"></i>--->
   </div>
 </nav>

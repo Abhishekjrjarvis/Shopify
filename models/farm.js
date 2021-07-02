@@ -1,12 +1,6 @@
 const mongoose = require('mongoose');
 const Product = require('./product')
 
-const ImageSchema = new mongoose.Schema({
-    url: String,
-    filename: String
-})
-
-const opts = {toJSON: {virtuals: true}}
 
 const farmSchema = new mongoose.Schema({
     name: {
@@ -29,7 +23,6 @@ const farmSchema = new mongoose.Schema({
     description: {
         type: String
     },
-    images: [ImageSchema],
     author:{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User'
@@ -44,13 +37,7 @@ const farmSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Review'
     }
-}, opts);
-
-
-// farmSchema.pre('findOneAndDelete', async function (data) {
-//     console.log('pre middleware .........')
-//     console.log(data)
-// })
+});
 
 
 farmSchema.post('findOneAndDelete', async function (farm) {

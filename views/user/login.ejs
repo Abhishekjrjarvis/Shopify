@@ -47,29 +47,3 @@
 
 
 
-<script>
-  const pHide = document.querySelector('.password-hide');
-  const pUnhide = document.querySelector('.password-unhide');
-  const ipass = document.getElementsByTagName('input')[2];
-  window.addEventListener('load', function(){
-    pHide.style.display = 'none'
-
-  })
-  pUnhide.addEventListener('click', function(){
-    ipass.removeAttribute('type','password');
-    ipass.setAttribute('type', 'text')
-    if(ipass.type === 'text'){
-      pHide.style.display = 'block';
-      pUnhide.style.display = 'none'
-    }
-    
-  })
-  pHide.addEventListener('click', function(){
-    ipass.removeAttribute('type', 'text');
-    ipass.setAttribute('type', 'password');
-    if(ipass.type === 'password'){
-      pUnhide.style.display = 'block';
-      pHide.style.display = 'none'
-    }
-  })
-</script>

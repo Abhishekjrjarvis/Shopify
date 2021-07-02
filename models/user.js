@@ -43,8 +43,6 @@ const userSchema = new mongoose.Schema({
         ref: 'Farm'
         }
     ],
-    resetPasswordToken: String,
-    resetPasswordExpires: Date,
     cart:[
         {
             type: mongoose.Schema.Types.ObjectId,
