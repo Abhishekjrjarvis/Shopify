@@ -11,12 +11,6 @@
     background-color: rgb(158, 5, 0);
     border: none;
 }
-/*     
-    .product-row .delete-products a{
-        color: #fff;
-        text-decoration: none;
-    }
-     */
 .col-md-6 .save:hover{
         color: #fff;
         background-color: rgb(158, 5, 0);

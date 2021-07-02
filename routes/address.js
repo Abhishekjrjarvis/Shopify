@@ -33,7 +33,6 @@ router.post('/account/profile/overview/m-address', async(req, res) =>{
       }
     })
     const orders = await Order.find(); 
-    // console.log(user.orders)
     res.render('order', { user, orders });
   })
 
@@ -45,7 +44,6 @@ router.post('/account/profile/overview/m-address', async(req, res) =>{
     const order = await Order.findById({_id:id}).populate({
       path:'productsItem'
     }).populate('user'); 
-    // console.log(order);
     res.render('orders', { user, order , orders });
   })
 
@@ -57,7 +55,6 @@ router.post('/verify/payment-flow/status-order', async(req, res) =>{
       order.productsItem.push(u); 
     }
     await order.save();
-    // console.log(order)
     user.orders.push(order);
     user.orderProducts.push(order)
     await user.save();

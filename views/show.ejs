@@ -91,13 +91,11 @@
 
             <p class="mt-2">
                 <span class="mb-3" style="color: #fff;">Available Offers</span><br>
-                <span class="" style="color: #fff; font-size: 14px;"><i class="fas fa-tag" style="color: rgb(1, 201, 1);"></i> Bank Offer 5% Unlimited Cashback on Flipkart Axis Bank Credit Card
+                <span class="" style="color: #fff; font-size: 14px;"><i class="fas fa-tag" style="color: rgb(1, 201, 1);"></i> Bank Offer 5% Unlimited Cashback on Shopify Axis Bank Credit Card
                 </span><br>
-                <span class="" style="color: #fff; font-size: 14px;"><i class="fas fa-tag" style="color: rgb(1, 201, 1);"></i> Bank OfferFlat ₹100 off on first Flipkart Pay Later order of ₹500 above</span>
+                <span class="" style="color: #fff; font-size: 14px;"><i class="fas fa-tag" style="color: rgb(1, 201, 1);"></i> Bank OfferFlat ₹100 off on first Shopify Pay Later order of ₹500 above</span>
             </p>
-            <!-- <% if(currentUser) { %>
-            <span class="text-white mt-3" style="float: right;"><a href="#">Write A Review</a></span>
-            <% } %>  -->
+            
             <button class="btn btn-warning btn-block add mt-4 addtocart" style="background-color: rgb(255, 94, 0);">
                 <a href="/user/verify-acc-cart/<%=product._id %>/checkout" style="text-decoration: none; color: #fff;"><i class="fas fa-bolt"></i> Buy Now</a>
             </button>
@@ -242,11 +240,6 @@
     <form action="/farms/<%= product.farm._id %>/products/<%= product._id %>?_method=DELETE" method="POST">
         <button class="btn btn-outline-danger btn-sm" style="background-color: rgb(110, 0, 0); border-radius: 2px; border: none; color: #fff;"><i class="far fa-trash-alt"></i> Delete </button>
     </form>
-    <button class="btn btn-outline-danger btn-sm" style="background-color: rgb(110, 0, 0); border-radius: 2px; border: none; color: #fff;">
-        <a href="/products/<%= product._id %>/edit " style="text-decoration: none;color: #fff;">
-        Edit
-    </a>
-    </button>
 <% } %>  
 
 

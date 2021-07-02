@@ -19,12 +19,6 @@ router.get("/", catchAsync(async (req, res) => {
     res.render("farm/index", { farms });
 }));
 
-
-
-
-
-
-
 router.get('/blogs', async(req, res)=>{
     const blogs = await Blog.find()
     res.render('blogs', { blogs })
@@ -45,12 +39,9 @@ router.get('/blogs/:id', async(req, res) =>{
 
 router.delete('/blogs/:id', async(req, res) =>{
     const { id } = req.params;
-    // console.log(id)
     const blog = await Blog.findByIdAndDelete({_id:id});
     res.redirect('/farms/blogs')
 })
-
-
 
 router.get('/guides', async(req, res) =>{
     const blogs = await Blog.find()
@@ -60,7 +51,10 @@ router.get('/guides', async(req, res) =>{
 
 
 
-  
+
+
+
+
 router.get("/new", isLoggedIn,  async(req, res) => {
     const user = await User.findById(req.user._id).populate('farms');
     const farm = await Farm.find({})

@@ -180,9 +180,6 @@
     color: rgb(185, 182, 182);
 }
 
-/* .user-experience .col-3 i{
-    color: rgb(190, 190, 190);
-} */
 
 .user-experience .col-3 h5{
     margin: 3px 0;
@@ -200,11 +197,6 @@
     color:#f50606;
 }
 
-
-
-/* .footer{
-    background-color: #3b3b3b;
-  } */
   
   .links{
     background-color: grey;
@@ -263,11 +255,6 @@
   .back-to-top:hover{
     background: none;
   }
-  /* /*.check{
-    background-color: gray;
-    height: 40px;
-    width: 60px;
-  } */
 
 .divide-line{
     width: 100%;
@@ -609,7 +596,6 @@ td:last-child{
         padding: 1px;
     }
     .detailed-one-product .col-6{
-        /* flex-basis: 100%; */
         margin:0 70px;
         padding: 20px 0;
     }

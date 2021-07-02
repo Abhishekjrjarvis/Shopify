@@ -17,17 +17,6 @@ router.post('/', async(req, res) =>{
     const review = await new Review(req.body.review);
     review.author = req.user._id;
     review.products = product;
-    if(review.rating == 5){
-        review.reviewCategory = 'Best'
-    }else if(review.rating == 4){
-        review.reviewCategory = 'Good'
-    }else if(review.rating == 3){
-        review.reviewCategory = 'Moderate'
-    }else if(review.rating == 2){
-        review.reviewCategory = 'Poor'
-    }else {
-        review.reviewCategory = 'Bad'
-    }
     product.reviews.push(review);
     await review.save()
     await product.save()

@@ -25,9 +25,6 @@ const catchAsync = require('./Utilities/catchAsync');
 const FarmError = require('./Utilities/FarmError');
 
 const dbUrl = 'mongodb://localhost:27017/productInfofarm';
-
-// process.env.DB_URL;
-// 'mongodb://localhost:27017/productInfofarm';
 mongoose.connect(dbUrl,
     { 
       useNewUrlParser: true,
@@ -49,8 +46,7 @@ mongoose.connect(dbUrl,
 const secret = `${process.env.SECRET}` || "adminCredentials";
 
 const sessionConfig = {
-    name: 'session',
-    
+    name: 'session', 
     // store,
     secret,
     resave: false,

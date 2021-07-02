@@ -7,10 +7,8 @@ const FarmError = require('../Utilities/FarmError');
 const Review = require('../models/review');
 const { isLoggedIn } = require('../middleware');
 
-
-// const categories = ["fruit", "electronics", "fashion"];
 router.get("/", catchAsync(async(req, res) => {
-    const { categories, productReviewRatings, productPriceFilter, productTag } = req.query;
+    const { categories,  productPriceFilter, productTag } = req.query;
     if (categories) {
       const products = await Product.find({ categories: categories,});
       res.render("index", { products, categories: categories,productPriceFilter: productPriceFilter, productTag: productTag});
@@ -164,20 +162,6 @@ router.delete('/:id/wishlist', async(req, res) =>{
     res.redirect('/user/account/profile/overview/home_wishlist')
 })
   
-router.get("/:id/edit", catchAsync(async (req, res) => {
-    const { id } = req.params;
-    const products = await Product.findById({ _id: id });
-    res.render("edit", { products });
-}));
-  
-router.put("/:id", catchAsync(async (req, res) => {
-    const { id } = req.params;
-    const products = await Product.findByIdAndUpdate(id, req.body, {
-      runValidators: true,
-      new: true,
-    });
-    res.redirect(`/products/${products._id}`);
-}));
   
 
 
